@@ -20,37 +20,6 @@
             color: #333;
         }
 
-        /* Navigation Bar */
-        nav {
-            position: sticky;
-            top: 0;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 15px 20px;
-            z-index: 1000;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #0056b3;
-        }
-
         /* Smooth Scroll Animation */
         .section {
             opacity: 0;
@@ -81,7 +50,7 @@
             font-size: 1.5rem;
             color: #007bff;
             margin-bottom: 20px;
-            animation: fadeIn 2s0s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
         }
 
         #hero p {
@@ -159,8 +128,8 @@
 
         .portfolio-item img {
             width: 100%;
-            max-height: 400px; /* Allow images to scale up to a max height */
-            object-fit: contain; /* Ensure full image is visible without cropping */
+            max-height: 400px;
+            object-fit: contain;
         }
 
         .portfolio-item p {
@@ -323,20 +292,25 @@
         /* Sticky WhatsApp Button */
         .whatsapp-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background: #25D366;
             color: #fff;
-            padding: 18px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             text-decoration: none;
-            font-size: 1.8rem;
-            transition: transform 0.3s ease;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .whatsapp-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         /* Responsive Design */
@@ -362,23 +336,18 @@
             }
 
             .portfolio-item img {
-                max-height: 300px; /* Adjust for smaller screens */
+                max-height: 300px;
+            }
+
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
     <!-- Hero Section -->
     <section id="hero" class="section">
         <img src="https://growthviadigital-portfolio.pages.dev/Blue%20Modern%20Personal%20Business%20LinkedIn%20Background%20Photo.png" alt="Faisal's Photo">
@@ -433,7 +402,7 @@
         <div class="testimonial-carousel">
             <div class="testimonial active">
                 <p>⭐️⭐️⭐️⭐️⭐️<br>"Faisal delivered a stunning website in just 3 days — clean, fast, and user-friendly!"</p>
-                <span>– Sheets Mitra </span>
+                <span>– Sheets Mitra</span>
             </div>
             <div class="testimonial">
                 <p>⭐️⭐️⭐️⭐️⭐️<br>"He understood my vision perfectly and brought it to life. Highly recommend!"</p>
@@ -456,7 +425,7 @@
             <textarea placeholder="Your Message" required></textarea>
             <button type="submit" class="btn">Send Message</button>
         </form>
-        <p>📱 <a href="https://wa.me/+91 8979401469 ">+91 8979401469 </a></p>
+        <p>📱 <a href="https://wa.me/+918979401469">+91 8979401469</a></p>
         <div class="social-icons">
             <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -465,7 +434,7 @@
     </section>
 
     <!-- Sticky WhatsApp Button -->
-    <a href="https://wa.me/+91 8979401469 " class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
 
     <script>
         // Smooth Scroll Animation
