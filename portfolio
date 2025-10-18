@@ -1,1 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faisal | Portfolio</title>
+    <meta name="description" content="Explore the portfolio of Faisal Arif, showcasing high-converting digital product websites created for various clients.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
+        body {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #0056b3;
+        }
+
+        /* Smooth Scroll Animation */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            padding: 80px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        #portfolio h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #portfolio .subtitle {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+        }
+
+        .portfolio-item p {
+            padding: 20px;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .portfolio-item .category {
+            font-size: 0.9rem;
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 10px 20px;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sticky WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #portfolio h2 {
+                font-size: 2rem;
+            }
+
+            #portfolio .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-item img {
+                max-height: 300px;
+            }
+
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#testimonials">Testimonials</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <h2>Our Portfolio</h2>
+        <p class="subtitle">Find out who all are happy with our website designing services when they had just a thought of a website in mind.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Diamondtree" alt="Diamondtree">
+                <p><span class="category">Design & Development</span><strong>Diamondtree</strong><br>Custom website design and development for a premium jewelry brand.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Tuileries+Patisserie" alt="Tuileries Patisserie">
+                <p><span class="category">Design & Development</span><strong>Tuileries Patisserie</strong><br>Modern website for a luxury patisserie, showcasing their products.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Vinayakmbooks" alt="Vinayakmbooks">
+                <p><span class="category">Design & Development</span><strong>Vinayakmbooks</strong><br>E-commerce platform for educational books and resources.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Proponline" alt="Proponline">
+                <p><span class="category">App Development</span><strong>Proponline</strong><br>Mobile app for streamlined proposal management.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Scholarshubbooks" alt="Scholarshubbooks">
+                <p><span class="category">Design & Development</span><strong>Scholarshubbooks</strong><br>Online bookstore with a focus on academic excellence.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Royal+Choppers" alt="Royal Choppers">
+                <p><span class="category">Design & Development</span><strong>Royal Choppers</strong><br>Custom website for a motorcycle customization brand.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Oldtree+Store" alt="Oldtree Store">
+                <p><span class="category">Design & Development</span><strong>Oldtree Store</strong><br>E-commerce site for vintage and artisanal products.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Designgaatha" alt="Designgaatha">
+                <p><span class="category">Design & Development</span><strong>Designgaatha</strong><br>Creative portfolio website for a design agency.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Pascojcb" alt="Pascojcb">
+                <p><span class="category">Design & Development</span><strong>Pascojcb</strong><br>Website for heavy machinery and equipment services.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Vendoz" alt="Vendoz">
+                <p><span class="category">App Development</span><strong>Vendoz</strong><br>Mobile app for e-commerce and vendor management.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Aritraa" alt="Aritraa">
+                <p><span class="category">Social</span><strong>Aritraa</strong><br>Social media campaign and website for a lifestyle brand.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Caxi" alt="Caxi">
+                <p><span class="category">App Development</span><strong>Caxi</strong><br>Mobile app for taxi booking and ride-sharing services.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Culinary+%26+Baking+Arts" alt="Culinary & Baking Arts">
+                <p><span class="category">Design & Development</span><strong>Culinary & Baking Arts</strong><br>Website for a culinary school with course showcases.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=GradesAhead" alt="GradesAhead">
+                <p><span class="category">Design & Development</span><strong>GradesAhead</strong><br>Educational platform for student tutoring and resources.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Jiwan+Books" alt="Jiwan Books">
+                <p><span class="category">Design & Development</span><strong>Jiwan Books</strong><br>E-commerce website for a publishing house.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        // Smooth Scroll Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
