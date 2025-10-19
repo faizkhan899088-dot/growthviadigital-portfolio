@@ -481,37 +481,6 @@
 
         function doPost(e) {
   try {
-      <script>
-    document.getElementById("cardForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const formData = new FormData(event.target);
-      const formDetails = {
-        Your Name : formData.get("Your Name"),
-        Your Email: formData.get("Your Email"),
-        Your Message: formData.get("Your Message"),
-          
-      };
-
-      const scriptURL = "https://script.google.com/macros/s/AKfycbx01ZLnM9RqC-Pj05I8KWIjoOC1a08c0aVCQFCQK00jE29WB_yjfJ9YgF557Xk1-td8mw/exec";
-
-      fetch(scriptURL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formDetails),
-      })
-        .then(() => {
-          // Show error message
-          document.getElementById("errorMsg").style.display = "block";
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          alert("⚠️ Something went wrong! Try again.");
-        });
-    });
-    </script>
+      
 </body>
 </html>
