@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', Arial, sans-serif; /* Fallback font */
         }
 
         body {
@@ -111,6 +111,9 @@
             gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
+            /* Fallback for older browsers */
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .portfolio-item {
@@ -119,6 +122,8 @@
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1 1 320px;
+            margin: 10px;
         }
 
         .portfolio-item:hover {
@@ -345,6 +350,20 @@
                 font-size: 1.6rem;
             }
         }
+
+        @media (max-width: 480px) {
+            #hero h1 {
+                font-size: 1.5rem;
+            }
+
+            #hero .tagline {
+                font-size: 1rem;
+            }
+
+            .portfolio-item img {
+                max-height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -419,24 +438,24 @@
     <section id="contact" class="section">
         <h2>Ready to Launch Your Website?</h2>
         <p>Let’s create a stunning digital product website that drives results! 🚀</p>
-        <form class="contact-form" action="mailto:faisal@example.com" method="post" enctype="text/plain">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit" class="btn">Send Message</button>
         </form>
         <p>📱 <a href="https://wa.me/+918979401469">+91 8979401469</a></p>
         <div class="social-icons">
-            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/faisalarif" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/faisalarif" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/faisalarif" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </section>
 
     <!-- Sticky WhatsApp Button -->
     <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
 
-        // Wait for DOM to load
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Testimonial Carousel
             const testimonials = document.querySelectorAll('.testimonial');
@@ -478,9 +497,6 @@
 
             sections.forEach(section => observer.observe(section));
         });
-
-        function doPost(e) {
-  try {
-      
+    </script>
 </body>
 </html>
