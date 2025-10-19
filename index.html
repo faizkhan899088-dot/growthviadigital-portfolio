@@ -436,7 +436,6 @@
     <!-- Sticky WhatsApp Button -->
     <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
 
-    <script>
         // Wait for DOM to load
         document.addEventListener('DOMContentLoaded', function() {
             // Testimonial Carousel
@@ -479,6 +478,40 @@
 
             sections.forEach(section => observer.observe(section));
         });
+
+        function doPost(e) {
+  try {
+      <script>
+    document.getElementById("cardForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const formDetails = {
+        Your Name : formData.get("Your Name"),
+        Your Email: formData.get("Your Email"),
+        Your Message: formData.get("Your Message"),
+          
+      };
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxxWc-gnkS1RosZF33aahxTFUWTINAoiyhin9pOzzVUZLJOugP4NAodKW7E8IHM5y03/exec";
+
+      fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formDetails),
+      })
+        .then(() => {
+          // Show error message
+          document.getElementById("errorMsg").style.display = "block";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("⚠️ Something went wrong! Try again.");
+        });
+    });
     </script>
 </body>
 </html>
