@@ -437,6 +437,34 @@
     <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
 
     <script>
+
+        function doPost(e) {
+  try {
+    const sheet = SpreadsheetApp.openById("1B_hDb_4tNfx8Z6Br_v3cODD9vSA4xrYSBff8ldDtsRY").getSheetByName("Sheet1");
+    const data = JSON.parse(e.postData.contents);
+
+    sheet.appendRow([
+      new Date(),
+        Your Name: formData.get("Your Name"),
+        Your Email: formData.get("Your Email"),
+        Your Message: formData.get("Your Message"),
+
+      data.accessNumber || "",
+    ]);
+
+    return ContentService.createTextOutput("Success");
+  } catch (error) {
+    return ContentService.createTextOutput("Error: " + error.message);
+  }
+}
+
+function doGet(e) {
+  return ContentService.createTextOutput("GET request working.");
+
+
+
+
+        
         // Smooth Scroll Animation
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.section');
