@@ -61,6 +61,18 @@
             color: #007bff;
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
         /* Smooth Scroll Animation */
         .section {
             opacity: 0;
@@ -77,32 +89,32 @@
         #hero {
             background: linear-gradient(135deg, #ffffff, #d0e7ff);
             text-align: center;
-            padding: 120px 20px;
+            padding: 80px 20px;
             position: relative;
         }
 
         #hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
             color: #333;
         }
 
         #hero .tagline {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #007bff;
             margin-bottom: 20px;
             animation: fadeIn 2s ease-in-out;
         }
 
         #hero p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin-bottom: 20px;
             color: #555;
         }
 
         #hero img {
-            width: 140px;
-            height: 140px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             margin: 20px auto;
             object-fit: cover;
@@ -111,13 +123,14 @@
 
         .btn {
             display: inline-block;
-            padding: 14px 28px;
+            padding: 12px 24px;
             background: #007bff;
             color: #fff;
             text-decoration: none;
             border-radius: 30px;
             margin: 10px;
             font-weight: 600;
+            font-size: 0.9rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
@@ -128,6 +141,30 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
+        /* Sticky WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -135,31 +172,75 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
             #hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             #hero .tagline {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             #hero p {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
 
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
+            #hero img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.8rem;
             }
         }
 
         @media (max-width: 480px) {
             #hero h1 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
             }
 
             #hero .tagline {
-                font-size: 1rem;
+                font-size: 0.9rem;
+            }
+
+            #hero p {
+                font-size: 0.8rem;
+            }
+
+            #hero img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .whatsapp-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -169,7 +250,8 @@
     <header>
         <div class="nav-container">
             <div class="logo">Faisal Arif</div>
-            <nav>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -192,6 +274,9 @@
         <a href="https://wa.me/+918979401469" class="btn">Launch Your Website</a>
     </section>
 
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.section');
@@ -204,6 +289,14 @@
             }, { threshold: 0.1 });
 
             sections.forEach(section => observer.observe(section));
+
+            // Hamburger Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
         });
     </script>
 </body>
