@@ -61,13 +61,25 @@
             color: #007bff;
         }
 
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
         /* About Section */
         #about {
-            padding: 80px 20px;
+            padding: 60px 20px;
             background: #f0f4f8;
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
             justify-content: center;
             align-items: center;
             max-width: 1200px;
@@ -76,12 +88,12 @@
 
         #about .about-text {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
         }
 
         #about img {
             width: 100%;
-            max-width: 320px;
+            max-width: 280px;
             border-radius: 12px;
             border: 2px solid #007bff;
         }
@@ -91,14 +103,14 @@
         }
 
         .skills-list li {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #555;
             margin-bottom: 10px;
         }
 
         .progress-bar {
             background: #e0e0e0;
-            height: 8px;
+            height: 6px;
             border-radius: 4px;
             overflow: hidden;
             margin-top: 5px;
@@ -110,6 +122,50 @@
             background: #007bff;
             width: 0;
             transition: width 1s ease-in-out;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sticky WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         /* Smooth Scroll Animation */
@@ -126,8 +182,65 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
             #about {
                 flex-direction: column;
+                gap: 15px;
+            }
+
+            #about .about-text h2 {
+                font-size: 1.8rem;
+            }
+
+            #about .about-text p {
+                font-size: 0.8rem;
+            }
+
+            .skills-list li {
+                font-size: 0.8rem;
+            }
+
+            #about img {
+                max-width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #about .about-text h2 {
+                font-size: 1.5rem;
+            }
+
+            #about img {
+                max-width: 160px;
+            }
+
+            .whatsapp-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -137,7 +250,8 @@
     <header>
         <div class="nav-container">
             <div class="logo">Faisal Arif</div>
-            <nav>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -160,9 +274,13 @@
                 <li>WooCommerce Setup <div class="progress-bar"><span style="width: 85%;"></span></div></li>
                 <li>Elementor Design <div class="progress-bar"><span style="width: 95%;"></span></div></li>
             </ul>
+            <a href="contact.html" class="btn">Get in Touch</a>
         </div>
         <img src="https://growthviadigital-portfolio.pages.dev/faisalarif.png" alt="Faisal arif at Work">
     </section>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -185,6 +303,14 @@
             }, { threshold: 0.1 });
 
             sections.forEach(section => observer.observe(section));
+
+            // Hamburger Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
         });
     </script>
 </body>
