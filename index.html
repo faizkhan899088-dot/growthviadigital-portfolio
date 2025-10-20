@@ -12,12 +12,53 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', Arial, sans-serif; /* Fallback font */
+            font-family: 'Poppins', Arial, sans-serif;
         }
 
         body {
             background: #f9f9f9;
             color: #333;
+        }
+
+        /* Sticky Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 20px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
         }
 
         /* Smooth Scroll Animation */
@@ -92,232 +133,6 @@
             100% { opacity: 1; }
         }
 
-        /* Portfolio Section */
-        #portfolio {
-            padding: 80px 20px;
-            background: #fff;
-            text-align: center;
-        }
-
-        #portfolio h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-            /* Fallback for older browsers */
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .portfolio-item {
-            background: #f9f9f9;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            flex: 1 1 320px;
-            margin: 10px;
-        }
-
-        .portfolio-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: contain;
-        }
-
-        .portfolio-item p {
-            padding: 20px;
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* About Section */
-        #about {
-            padding: 80px 20px;
-            background: #f0f4f8;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        #about .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        #about img {
-            width: 100%;
-            max-width: 320px;
-            border-radius: 12px;
-            border: 2px solid #007bff;
-        }
-
-        .skills-list {
-            margin-top: 20px;
-        }
-
-        .skills-list li {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .progress-bar {
-            background: #e0e0e0;
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-top: 5px;
-        }
-
-        .progress-bar span {
-            display: block;
-            height: 100%;
-            background: #007bff;
-            width: 0;
-            transition: width 1s ease-in-out;
-        }
-
-        /* Testimonials Section */
-        #testimonials {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #d0e7ff, #ffffff);
-            text-align: center;
-        }
-
-        #testimonials h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-        }
-
-        .testimonial-carousel {
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .testimonial {
-            display: none;
-            padding: 20px;
-            font-style: italic;
-            color: #555;
-            animation: slideIn 0.5s ease-in-out;
-        }
-
-        .testimonial.active {
-            display: block;
-        }
-
-        .testimonial p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .testimonial span {
-            display: block;
-            font-weight: 600;
-            color: #333;
-        }
-
-        @keyframes slideIn {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Contact Section */
-        #contact {
-            padding: 80px 20px;
-            background: #fff;
-            text-align: center;
-        }
-
-        #contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        #contact p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .contact-form textarea {
-            height: 120px;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            color: #007bff;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: #0056b3;
-        }
-
-        /* Sticky WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            text-decoration: none;
-            font-size: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             #hero h1 {
@@ -332,22 +147,9 @@
                 font-size: 1rem;
             }
 
-            #about {
+            nav ul {
                 flex-direction: column;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .portfolio-item img {
-                max-height: 300px;
-            }
-
-            .whatsapp-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.6rem;
+                gap: 10px;
             }
         }
 
@@ -359,14 +161,26 @@
             #hero .tagline {
                 font-size: 1rem;
             }
-
-            .portfolio-item img {
-                max-height: 200px;
-            }
         }
     </style>
 </head>
 <body>
+    <!-- Sticky Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Faisal Arif</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section id="hero" class="section">
         <img src="https://growthviadigital-portfolio.pages.dev/faisalarif0.png" alt="Faisal's Photo">
@@ -374,118 +188,12 @@
         <div class="tagline">Crafting High-Converting Digital Product Websites</div>
         <p>I help <strong>Coaches, Consultants & Creators</strong> launch stunning websites that drive sales and growth.</p>
         <p>💻 5+ Clients Served | Starting at ₹2999 | 100% Satisfaction Guaranteed</p>
-        <a href="portfolio" class="btn">Explore My Work</a>
+        <a href="portfolio.html" class="btn">Explore My Work</a>
         <a href="https://wa.me/+918979401469" class="btn">Launch Your Website</a>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-        <h2>PORTFOLIO</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="https://growthviadigital-portfolio.pages.dev/toolwallah.png" alt="Project 1">
-                <p><strong>Project:</strong> Digital Product Store<br><strong>Client:</strong> Sneha Studio<br><strong>Result:</strong> 20+ downloads in 30 days<br><strong>Tech:</strong> WordPress, WooCommerce, Elementor</p>
-                <a href="https://toolwallah.com/" class="btn">View Live</a>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://growthviadigital-portfolio.pages.dev/sheetsmitra.png" alt="Project 2">
-                <p><strong>Project:</strong> Course Website<br><strong>Client:</strong> Rahul Academy<br><strong>Result:</strong> 15+ enrollments in 2 weeks<br><strong>Tech:</strong> WordPress, Elementor</p>
-                <a href="https://sheetsmitra.com/" class="btn">View Live</a>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://growthviadigital-portfolio.pages.dev/digitreatt.png" alt="Project 3">
-                <p><strong>Project:</strong> E-Book Landing Page<br><strong>Client:</strong> Priya Publications<br><strong>Result:</strong> 50+ sales in first month<br><strong>Tech:</strong> WordPress, Elementor</p>
-                <a href="https://digitreat.online/" class="btn">View Live</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>👋 I’m Faisal, a passionate freelance web designer dedicated to helping digital product creators launch beautiful, high-performing websites.</p>
-            <p>With expertise in <strong>WordPress, WooCommerce, and Elementor</strong>, I focus on creating user-friendly designs that maximize conversions and grow your business.</p>
-            <ul class="skills-list">
-                <li>WordPress Development <div class="progress-bar"><span style="width: 90%;"></span></div></li>
-                <li>WooCommerce Setup <div class="progress-bar"><span style="width: 85%;"></span></div></li>
-                <li>Elementor Design <div class="progress-bar"><span style="width: 95%;"></span></div></li>
-            </ul>
-        </div>
-        <img src="https://growthviadigital-portfolio.pages.dev/faisalarif.png" alt="Faisal arif at Work">
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section">
-        <h2>What Clients Say</h2>
-        <div class="testimonial-carousel">
-            <div class="testimonial active">
-                <p>⭐️⭐️⭐️⭐️⭐️<br>"Faisal delivered a stunning website in just 3 days — clean, fast, and user-friendly!"</p>
-                <span>– Sheets Mitra</span>
-            </div>
-            <div class="testimonial">
-                <p>⭐️⭐️⭐️⭐️⭐️<br>"He understood my vision perfectly and brought it to life. Highly recommend!"</p>
-                <span>– digitreat | Course Creator</span>
-            </div>
-            <div class="testimonial">
-                <p>⭐️⭐️⭐️⭐️⭐️<br>"Faisal’s designs boosted my sales significantly. Professional and reliable!"</p>
-                <span>– toolwallah | E-Book Author</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Ready to Launch Your Website?</h2>
-        <p>Let’s create a stunning digital product website that drives results! 🚀</p>
-        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <p>📱 <a href="https://wa.me/+918979401469">+91 8979401469</a></p>
-        <div class="social-icons">
-            <a href="https://instagram.com/faisalarif" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/faisalarif" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/faisalarif" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-    </section>
-
-    <!-- Sticky WhatsApp Button -->
-    <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Testimonial Carousel
-            const testimonials = document.querySelectorAll('.testimonial');
-            let currentTestimonial = 0;
-
-            function showTestimonial(index) {
-                testimonials.forEach((testimonial, i) => {
-                    testimonial.classList.remove('active');
-                    if (i === index) {
-                        testimonial.classList.add('active');
-                    }
-                });
-            }
-
-            setInterval(() => {
-                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-                showTestimonial(currentTestimonial);
-            }, 5000);
-
-            // Progress Bar Animation
-            const progressBars = document.querySelectorAll('.progress-bar span');
-            progressBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 500);
-            });
-
-            // Section Animation on Scroll (using Intersection Observer)
             const sections = document.querySelectorAll('.section');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
