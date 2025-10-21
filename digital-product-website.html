@@ -20,16 +20,17 @@
         body {
             background: #f9f9f9;
             color: #333;
+            line-height: 1.6;
         }
 
         /* Sticky Header */
         header {
             background: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 15px 20px;
+            padding: 10px 20px;
         }
 
         .nav-container {
@@ -41,7 +42,7 @@
         }
 
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: #007bff;
         }
@@ -49,14 +50,16 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 25px;
+            align-items: center;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #333;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
@@ -68,6 +71,7 @@
             font-size: 1.8rem;
             cursor: pointer;
             color: #333;
+            padding: 5px;
         }
 
         .nav-menu {
@@ -79,7 +83,7 @@
             background: linear-gradient(135deg, #007bff, #00c4ff);
             color: #fff;
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
             position: relative;
             overflow: hidden;
         }
@@ -92,181 +96,237 @@
             width: 100%;
             height: 100%;
             background: url('https://via.placeholder.com/1200x400?text=Digital+Product+Hero') center/cover;
-            opacity: 0.2;
+            opacity: 0.1;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
+        .hero-content {
             position: relative;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-        }
-
-        /* Digital Product Section */
-        #digital-product {
-            padding: 60px 20px;
-            background: #fff;
-            text-align: center;
-            max-width: 1200px;
             margin: 0 auto;
         }
 
-        #digital-product .section-alt {
-            background: #f1f8ff;
-            padding: 40px 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        #digital-product h2 {
-            font-size: 2.2rem;
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
             margin-bottom: 20px;
-            color: #333;
+            line-height: 1.2;
         }
 
-        #digital-product h3 {
-            font-size: 1.5rem;
-            margin: 30px 0 15px;
-            color: #007bff;
-            font-weight: 600;
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
 
-        #digital-product p {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #digital-product ul {
-            list-style: none;
-            margin-bottom: 20px;
-            text-align: left;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #digital-product ul li {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-        }
-
-        #digital-product ul li i {
-            color: #007bff;
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-
-        #digital-product ol {
-            list-style: decimal;
-            margin-left: 20px;
-            margin-bottom: 20px;
-            text-align: left;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #digital-product ol li {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 12px;
-        }
-
-        #digital-product img {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin: 20px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
+        /* Buttons */
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 15px 30px;
             background: linear-gradient(135deg, #007bff, #00c4ff);
             color: #fff;
             text-decoration: none;
-            border-radius: 30px;
-            margin: 10px;
+            border-radius: 50px;
             font-weight: 600;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
             background: linear-gradient(135deg, #0056b3, #0096cc);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #fff;
+            margin-left: 15px;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: #007bff;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-alt {
+            background: #f8f9fa;
+            padding: 50px 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 30px 0 20px;
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        ul li {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        ul li i {
+            color: #007bff;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        ol {
+            list-style: decimal;
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        ol li {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 15px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .testimonial {
-            background: #f9f9f9;
-            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
             text-align: center;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .testimonial p {
             font-style: italic;
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
 
         .testimonial span {
             font-weight: 600;
-            color: #333;
+            font-size: 1rem;
         }
 
+        /* WhatsApp Button */
         .whatsapp-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background: #25D366;
             color: #fff;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             text-decoration: none;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            animation: pulse 2s infinite;
         }
 
         .whatsapp-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+            text-decoration: none;
+            color: #fff;
         }
 
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Animations */
         .section {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-in-out;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
         }
 
         .section.visible {
@@ -274,6 +334,7 @@
             transform: translateY(0);
         }
 
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
@@ -282,21 +343,34 @@
             .nav-menu {
                 display: none;
                 position: absolute;
-                top: 60px;
+                top: 100%;
                 left: 0;
                 right: 0;
                 background: #fff;
                 flex-direction: column;
                 padding: 20px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 999;
             }
 
             .nav-menu.active {
                 display: flex;
             }
 
-            nav ul li {
-                margin: 10px 0;
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                display: block;
+                border-bottom: 1px solid #eee;
+            }
+
+            .hero {
+                padding: 80px 15px;
             }
 
             .hero h1 {
@@ -307,256 +381,257 @@
                 font-size: 1rem;
             }
 
-            #digital-product h2 {
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 10px;
+                display: inline-block;
+            }
+
+            h2 {
                 font-size: 1.8rem;
             }
 
-            #digital-product h3 {
+            h3 {
                 font-size: 1.3rem;
             }
 
-            #digital-product p {
-                font-size: 0.9rem;
+            .section-alt {
+                padding: 30px 20px;
+                margin: 20px 0;
             }
 
-            #digital-product ul li, #digital-product ol li {
-                font-size: 0.85rem;
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
-            #digital-product img {
-                max-height: 200px;
+            .main-content {
+                padding: 40px 15px;
             }
 
-            .testimonial p {
-                font-size: 0.9rem;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.85rem;
+            .whatsapp-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+                bottom: 20px;
+                right: 20px;
             }
         }
 
         @media (max-width: 480px) {
+            .hero {
+                padding: 60px 15px;
+            }
+
             .hero h1 {
                 font-size: 1.6rem;
             }
 
             .hero p {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
 
-            #digital-product h2 {
+            h2 {
                 font-size: 1.5rem;
             }
 
-            #digital-product h3 {
-                font-size: 1.2rem;
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
             }
 
-            #digital-product p {
-                font-size: 0.85rem;
-            }
-
-            #digital-product ul li, #digital-product ol li {
-                font-size: 0.8rem;
-            }
-
-            #digital-product img {
-                max-height: 150px;
+            .testimonial {
+                padding: 30px 20px;
             }
 
             .testimonial p {
-                font-size: 0.85rem;
+                font-size: 1rem;
             }
 
-            .whatsapp-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1.4rem;
+            p, ul li, ol li {
+                font-size: 0.9rem;
             }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="nav-container">
             <div class="logo">Faisal Arif</div>
             <div class="hamburger"><i class="fas fa-bars"></i></div>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero section">
-        <h1>Launch Your Digital Product Empire</h1>
-        <p>Are you a creator, coach, or author ready to sell <strong>eBooks</strong>, <strong>online courses</strong>, or <strong>digital downloads</strong>? With <strong>affordable WordPress website design in India</strong> starting at just <strong>₹2999</strong>, Faisal Arif delivers professional, mobile-friendly websites tailored for creators. Get <strong>free hosting</strong>, <strong>1-year support</strong>, and a seamless setup to launch your <strong>digital product business</strong> in 48–72 hours.</p>
-        <a href="https://wa.me/+918979401469" class="btn">Start Now</a>
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="hero-content">
+            <h1>Launch Your Digital Product Empire</h1>
+            <p>Ready to sell <strong>eBooks</strong>, <strong>online courses</strong>, or <strong>digital downloads</strong>? Get professional WordPress websites starting at just <strong>₹2999</strong> with free hosting & support!</p>
+            <a href="https://wa.me/+918979401469?text=Hi%20Faisal,%20I%27m%20interested%20in%20Digital%20Product%20Website%20Design" class="btn" target="_blank">Start Now - WhatsApp</a>
+            <a href="#digital-product" class="btn btn-secondary">Learn More</a>
+        </div>
     </section>
 
-    <section id="digital-product" class="section">
-        <div class="section-alt">
-            <h2>Why You Need a Digital Product Website</h2>
-            <p>Selling through marketplaces like Amazon or social media DMs limits your control and profits. A <strong>custom WordPress website</strong> empowers you to take charge of your digital business. Here’s why creators across India are choosing their own <strong>digital product websites</strong>:</p>
+    <!-- Main Content -->
+    <div class="main-content">
+        <section id="digital-product" class="section">
+            <div class="section-alt">
+                <h2>Why You Need a Digital Product Website</h2>
+                <p>Selling through Amazon or social media DMs limits your profits and control. Build your own <strong>WordPress website</strong> to:</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-rupee-sign"></i>
+                        <h3>100% Profits</h3>
+                        <p>Keep all your earnings without platform fees</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Build Your Brand</h3>
+                        <p>Create a professional presence that stands out</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-download"></i>
+                        <h3>Instant Delivery</h3>
+                        <p>Automatic downloads after payment</p>
+                    </div>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Automated payments with Razorpay, PayPal, Stripe</li>
+                    <li><i class="fas fa-clock"></i>24/7 sales without restrictions</li>
+                    <li><i class="fas fa-mobile-alt"></i>Fully mobile responsive design</li>
+                </ul>
+            </div>
+
+            <h2>Perfect for All Digital Products</h2>
+            <img src="https://via.placeholder.com/800x400?text=Digital+Products+Showcase" alt="Digital Product Website Examples">
+            <p>Create a professional store for:</p>
             <ul>
-                <li><i class="fas fa-check-circle"></i>Keep <strong>100% profit</strong> without platform commissions</li>
-                <li><i class="fas fa-check-circle"></i>Build a <strong>personal brand</strong> to stand out</li>
-                <li><i class="fas fa-check-circle"></i>Offer <strong>instant downloads</strong> and collect customer emails</li>
-                <li><i class="fas fa-check-circle"></i>Automate payments with <strong>Razorpay</strong>, <strong>PayPal</strong>, or <strong>Stripe</strong></li>
-                <li><i class="fas fa-check-circle"></i>Sell <strong>24/7</strong> without third-party restrictions</li>
+                <li><i class="fas fa-book"></i><strong>eBooks & Guides</strong> - PDFs, EPUBs, printables</li>
+                <li><i class="fas fa-graduation-cap"></i><strong>Online Courses</strong> - Video lessons & certifications</li>
+                <li><i class="fas fa-file-alt"></i><strong>Templates</strong> - Canva, Notion, Lightroom presets</li>
+                <li><i class="fas fa-video"></i><strong>Video Content</strong> - Tutorials & workshops</li>
             </ul>
-            <p>Join thousands of <strong>Indian creators</strong> building their <strong>digital product websites</strong> with WordPress, the platform powering over 40% of the internet.</p>
-        </div>
 
-        <h2>What is a Digital Product Website?</h2>
-        <img src="https://via.placeholder.com/800x300?text=Digital+Product+Website+Design" alt="WordPress Digital Product Website Design">
-        <p>A <strong>digital product website</strong> is an online store for non-physical products like:</p>
-        <ul>
-            <li><i class="fas fa-book"></i><strong>eBooks</strong>: Guides, novels, or niche resources</li>
-            <li><i class="fas fa-graduation-cap"></i><strong>Online Courses</strong>: Video lessons or certifications</li>
-            <li><i class="fas fa-file-alt"></i><strong>Digital Downloads</strong>: Templates, PDFs, or planners</li>
-            <li><i class="fas fa-video"></i><strong>Video Content</strong>: Tutorials or workshops</li>
-        </ul>
-        <p>With <strong>WordPress</strong>, you can create a professional store on a budget, perfect for beginners and small businesses in India looking to sell globally.</p>
+            <div class="section-alt">
+                <h2>₹2999 Complete Package Includes</h2>
+                <ul>
+                    <li><i class="fas fa-desktop"></i>Modern, mobile-friendly WordPress design</li>
+                    <li><i class="fas fa-credit-card"></i>Payment gateway integration (Razorpay/PayPal)</li>
+                    <li><i class="fas fa-upload"></i>Product upload setup for your digital files</li>
+                    <li><i class="fas fa-server"></i><strong>1-Year FREE hosting</strong></li>
+                    <li><i class="fas fa-headset"></i><strong>1-Year FREE support</strong></li>
+                    <li><i class="fas fa-search"></i>SEO optimization for better Google ranking</li>
+                    <li><i class="fas fa-gift"></i><strong>BONUS:</strong> Free setup of first 5 products</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://wa.me/+918979401469?text=Hi%20Faisal,%20I%20want%20the%20₹2999%20Digital%20Product%20Website%20package" class="btn" target="_blank">Get Started Now</a>
+                </div>
+            </div>
 
-        <div class="section-alt">
-            <h2>Our Affordable Website Design Service in India</h2>
-            <p>No need to spend ₹10,000+ on complex setups. For just <strong>₹2999</strong>, get a complete WordPress website with:</p>
-            <ul>
-                <li><i class="fas fa-desktop"></i><strong>Modern, mobile-friendly design</strong></li>
-                <li><i class="fas fa-credit-card"></i><strong>Payment gateway integration</strong> (Razorpay/PayPal)</li>
-                <li><i class="fas fa-upload"></i><strong>Product upload setup</strong> for eBooks & courses</li>
-                <li><i class="fas fa-server"></i><strong>1-year free hosting</strong></li>
-                <li><i class="fas fa-headset"></i><strong>1-year support</strong></li>
-                <li><i class="fas fa-gift"></i><strong>Bonus</strong>: Free upload of your first 3 products</li>
-            </ul>
-            <p>Ideal for freelancers, content creators, and solopreneurs looking to sell without monthly fees.</p>
-        </div>
+            <div class="testimonial">
+                <p>"Faisal delivered my eBook website in just 3 days! Professional design, fast loading, and I'm making sales without platform fees. Highly recommended!"</p>
+                <span>— Priya Sharma, Author</span>
+            </div>
 
-        <h2>Digital Product Website Design for Creators</h2>
-        <p>Your website should reflect your creativity. Whether you sell Lightroom presets, Canva templates, or guides, your <strong>digital product website</strong> will be:</p>
-        <ul>
-            <li><i class="fas fa-star"></i><strong>Clean & professional</strong> to build trust</li>
-            <li><i class="fas fa-bolt"></i><strong>Fast-loading</strong> for better conversions</li>
-            <li><i class="fas fa-edit"></i><strong>Easy to update</strong> — add products anytime</li>
-            <li><i class="fas fa-mobile-alt"></i><strong>Optimized for mobile</strong> users</li>
-        </ul>
-        <p>WordPress offers full ownership, no subscription costs, and a hub for products, blogs, and email lists.</p>
+            <div class="testimonial">
+                <p>"Perfect solution for my online courses. Easy to manage, students love it, and the support is excellent. Worth every penny!"</p>
+                <span>— Rohan Mehta, Educator</span>
+            </div>
 
-        <div class="section-alt">
-            <h2>eBook Selling Website Design with WordPress</h2>
-            <p>Earn passive income with a <strong>WordPress eBook website</strong>. Your <strong>eBook selling website design</strong> includes:</p>
-            <ul>
-                <li><i class="fas fa-book-open"></i><strong>Beautiful landing page</strong> for eBook covers</li>
-                <li><i class="fas fa-cart-arrow-down"></i><strong>One-click checkout</strong> with instant downloads</li>
-                <li><i class="fas fa-lock"></i><strong>Secure payment gateways</strong> (Razorpay/Stripe)</li>
-                <li><i class="fas fa-quote-left"></i><strong>Testimonials section</strong> for credibility</li>
-                <li><i class="fas fa-search"></i><strong>SEO setup</strong> for book titles</li>
-            </ul>
-            <p>Sell directly to readers—no Amazon fees, full control over pricing and design.</p>
-        </div>
-
-        <h2>Online Course Selling Website Design</h2>
-        <p>Showcase your expertise with a <strong>professional course website</strong>. Your <strong>course website design</strong> includes:</p>
-        <ul>
-            <li><i class="fas fa-home"></i><strong>Clean homepage</strong> for courses</li>
-            <li><i class="fas fa-video"></i><strong>Video preview section</strong> for demos</li>
-            <li><i class="fas fa-user-plus"></i><strong>Enrollment and payment integration</strong></li>
-            <li><i class="fas fa-shield-alt"></i><strong>Course content protection</strong></li>
-            <li><i class="fas fa-comments"></i><strong>Student testimonials and FAQs</strong></li>
-        </ul>
-        <p>Use free plugins like <strong>LearnPress</strong> or <strong>Tutor LMS</strong> to manage lessons and certificates.</p>
-
-        <div class="section-alt">
-            <h2>Why Choose WordPress?</h2>
-            <p>WordPress powers over 40% of websites globally, making it perfect for your digital product business:</p>
-            <ul>
-                <li><i class="fas fa-money-bill"></i><strong>No monthly fees</strong> — one-time setup</li>
-                <li><i class="fas fa-paint-brush"></i><strong>Full control</strong> over design</li>
-                <li><i class="fas fa-file-alt"></i><strong>Supports all product types</strong> — PDFs, videos</li>
-                <li><i class="fas fa-cogs"></i><strong>Easy to update</strong> — no coding needed</li>
-                <li><i class="fas fa-search"></i><strong>SEO-friendly</strong> — rank faster on Google</li>
-            </ul>
-        </div>
-
-        <h2>What’s Included in Our ₹2999 Package</h2>
-        <p>With our <strong>affordable digital product website design</strong>, you get:</p>
-        <ul>
-            <li><i class="fas fa-desktop"></i><strong>Modern WordPress design</strong></li>
-            <li><i class="fas fa-file-upload"></i><strong>Product pages</strong> for eBooks, courses, templates</li>
-            <li><i class="fas fa-credit-card"></i><strong>Payment integration</strong> (Razorpay/PayPal)</li>
-            <li><i class="fas fa-server"></i><strong>Free hosting</strong> for 1 year</li>
-            <li><i class="fas fa-headset"></i><strong>Free support</strong> for 1 year</li>
-            <li><i class="fas fa-mobile-alt"></i><strong>Mobile-friendly + SEO setup</strong></li>
-            <li><i class="fas fa-gift"></i><strong>Bonus</strong>: Free upload of your first 3 products</li>
-        </ul>
-
-        <div class="section-alt">
-            <h2>How It Works</h2>
-            <p>Getting your digital product website is simple:</p>
+            <h2>Simple 3-Step Process</h2>
             <ol>
-                <li><strong>Contact Us on WhatsApp</strong>: Share your idea (eBook, course, etc.)</li>
-                <li><strong>Choose Your Design</strong>: Pick from 2–3 WordPress templates</li>
-                <li><strong>Launch</strong>: Your site goes live in 48–72 hours!</li>
+                <li><strong>Contact Us:</strong> WhatsApp your requirements (eBook/course store)</li>
+                <li><strong>Design Selection:</strong> Choose from 3 professional templates</li>
+                <li><strong>Launch:</strong> Live website in 48-72 hours with products uploaded</li>
             </ol>
-        </div>
 
-        <div class="testimonial">
-            <p>"Faisal built my eBook website in just 3 days! It’s professional, fast, and I’m already making sales without any platform fees!"</p>
-            <span>— Priya Sharma, Author</span>
-        </div>
-        <div class="testimonial">
-            <p>"The course website Faisal designed is amazing. It’s easy to manage, and my students love the seamless experience!"</p>
-            <span>— Rohan Mehta, Online Educator</span>
-        </div>
+            <div style="text-align: center; margin: 50px 0;">
+                <a href="https://wa.me/+918979401469?text=Hi%20Faisal,%20Let%27s%20get%20started%20with%20my%20digital%20product%20website" class="btn" target="_blank">Start Your Project Today</a>
+            </div>
+        </section>
+    </div>
 
-        <h2>Why India is the Perfect Market for Digital Products</h2>
-        <p>India’s digital economy is booming, with millions seeking eBooks, courses, and templates online. A <strong>digital product website</strong> lets you tap into this market while serving global customers. With our <strong>affordable website design in India</strong>, you can compete without a big budget.</p>
-
-        <h2>Tips for Success with Your Digital Product Website</h2>
-        <p>Maximize your website’s potential with these tips:</p>
-        <ul>
-            <li><i class="fas fa-search"></i><strong>Optimize for SEO</strong>: Use keywords like your product titles to rank higher</li>
-            <li><i class="fas fa-users"></i><strong>Engage Your Audience</strong>: Add a blog or email signup</li>
-            <li><i class="fas fa-share-alt"></i><strong>Promote on Social Media</strong>: Share on X, Instagram, or LinkedIn</li>
-            <li><i class="fas fa-sync"></i><strong>Update Regularly</strong>: Add new products to keep visitors returning</li>
-            <li><i class="fas fa-chart-line"></i><strong>Analyze Performance</strong>: Use Google Analytics to track sales</li>
-        </ul>
-
-        <h2>Ready to Launch Your Digital Product Business?</h2>
-        <p>Build your <strong>brand</strong> and <strong>independence</strong> with a <strong>digital product website</strong>. Whether you’re a <strong>creator</strong>, <strong>coach</strong>, or <strong>author</strong>, our <strong>affordable website design in India</strong> helps you sell eBooks, courses, or templates with WordPress.</p>
-        <p><strong>Ready to start?</strong> <a href="https://wa.me/+918979401469" class="btn">WhatsApp Us Now</a></p>
-    </section>
-
-    <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+918979401469?text=Hi%20Faisal,%20I%27m%20interested%20in%20Digital%20Product%20Website%20Design" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
+        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
             const sections = document.querySelectorAll('.section');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                     }
                 });
-            }, { threshold: 0.1 });
+            }, observerOptions);
 
             sections.forEach(section => observer.observe(section));
 
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-
-            hamburger.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
+            // WhatsApp button click tracking
+            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+            whatsappLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // You can add analytics tracking here
+                    console.log('WhatsApp clicked');
+                });
             });
         });
+
+        // Prevent zoom on iOS devices for buttons
+        document.addEventListener('touchstart', function() {}, true);
     </script>
 </body>
 </html>
