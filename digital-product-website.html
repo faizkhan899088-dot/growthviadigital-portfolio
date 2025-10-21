@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Product Website Service | Faisal Arif</title>
-    <meta name="description" content="Affordable digital product website design in India by Faisal Arif. Launch high-converting WordPress websites for eBooks, online courses, and digital downloads starting at ₹2999.">
-    <meta name="keywords" content="digital product website, affordable website design India, WordPress eBook website, online course website, digital downloads, freelance web designer">
+    <title>Digital Product Website Design | Faisal Arif</title>
+    <meta name="description" content="Launch your eBooks, online courses, or digital downloads with affordable WordPress website design in India by Faisal Arif. Starting at ₹2999 with free hosting and support.">
+    <meta name="keywords" content="digital product website, affordable website design India, WordPress eBook website, online course website, digital downloads, WordPress website design, freelance web designer, eBook selling website, course website design">
     <meta name="author" content="Faisal Arif">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -41,7 +41,7 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: #007bff;
         }
@@ -63,7 +63,6 @@
             color: #007bff;
         }
 
-        /* Hamburger Menu */
         .hamburger {
             display: none;
             font-size: 1.8rem;
@@ -75,6 +74,43 @@
             display: flex;
         }
 
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #007bff, #00c4ff);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1200x400?text=Digital+Product+Hero') center/cover;
+            opacity: 0.2;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
         /* Digital Product Section */
         #digital-product {
             padding: 60px 20px;
@@ -84,6 +120,13 @@
             margin: 0 auto;
         }
 
+        #digital-product .section-alt {
+            background: #f1f8ff;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
         #digital-product h2 {
             font-size: 2.2rem;
             margin-bottom: 20px;
@@ -91,15 +134,16 @@
         }
 
         #digital-product h3 {
-            font-size: 1.4rem;
-            margin: 20px 0 10px;
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
             color: #007bff;
+            font-weight: 600;
         }
 
         #digital-product p {
             font-size: 1rem;
             color: #555;
-            line-height: 1.6;
+            line-height: 1.8;
             margin-bottom: 15px;
             max-width: 800px;
             margin-left: auto;
@@ -107,9 +151,8 @@
         }
 
         #digital-product ul {
-            list-style: disc;
-            margin-left: 20px;
-            margin-bottom: 15px;
+            list-style: none;
+            margin-bottom: 20px;
             text-align: left;
             max-width: 800px;
             margin-left: auto;
@@ -117,9 +160,33 @@
         }
 
         #digital-product ul li {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #555;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        #digital-product ul li i {
+            color: #007bff;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        #digital-product ol {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #digital-product ol li {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 12px;
         }
 
         #digital-product img {
@@ -128,29 +195,51 @@
             object-fit: cover;
             border-radius: 12px;
             margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background: #007bff;
+            background: linear-gradient(135deg, #007bff, #00c4ff);
             color: #fff;
             text-decoration: none;
             border-radius: 30px;
             margin: 10px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background: #0056b3;
+            background: linear-gradient(135deg, #0056b3, #0096cc);
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        /* Sticky WhatsApp Button */
+        .testimonial {
+            background: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial p {
+            font-style: italic;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .testimonial span {
+            font-weight: 600;
+            color: #333;
+        }
+
         .whatsapp-btn {
             position: fixed;
             bottom: 20px;
@@ -174,7 +263,6 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        /* Smooth Scroll Animation */
         .section {
             opacity: 0;
             transform: translateY(20px);
@@ -186,7 +274,6 @@
             transform: translateY(0);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
@@ -212,8 +299,55 @@
                 margin: 10px 0;
             }
 
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
             #digital-product h2 {
                 font-size: 1.8rem;
+            }
+
+            #digital-product h3 {
+                font-size: 1.3rem;
+            }
+
+            #digital-product p {
+                font-size: 0.9rem;
+            }
+
+            #digital-product ul li, #digital-product ol li {
+                font-size: 0.85rem;
+            }
+
+            #digital-product img {
+                max-height: 200px;
+            }
+
+            .testimonial p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            #digital-product h2 {
+                font-size: 1.5rem;
             }
 
             #digital-product h3 {
@@ -221,38 +355,19 @@
             }
 
             #digital-product p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
-            #digital-product ul li {
-                font-size: 0.8rem;
-            }
-
-            #digital-product img {
-                max-height: 200px;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.8rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            #digital-product h2 {
-                font-size: 1.5rem;
-            }
-
-            #digital-product h3 {
-                font-size: 1.1rem;
-            }
-
-            #digital-product p {
+            #digital-product ul li, #digital-product ol li {
                 font-size: 0.8rem;
             }
 
             #digital-product img {
                 max-height: 150px;
+            }
+
+            .testimonial p {
+                font-size: 0.85rem;
             }
 
             .whatsapp-btn {
@@ -264,7 +379,6 @@
     </style>
 </head>
 <body>
-    <!-- Sticky Header -->
     <header>
         <div class="nav-container">
             <div class="logo">Faisal Arif</div>
@@ -281,114 +395,146 @@
         </div>
     </header>
 
-    <!-- Digital Product Website Service Section -->
-    <section id="digital-product" class="section">
-        <h2>Affordable Digital Product Website Design in India</h2>
-        <img src="https://via.placeholder.com/800x300?text=Digital+Product+Website" alt="Digital Product Website Design">
-        <p>In today’s digital era, selling your knowledge and creativity online has never been easier. Whether you’re a <strong>creator, coach, consultant, or author</strong>, having your own <strong>digital product website</strong> is the smartest way to build passive income.</p>
-        <p>If you’re looking for an <strong>affordable digital product website design in India</strong>, I can help you launch your own <strong>eBook store</strong>, <strong>course website</strong>, or <strong>digital download shop</strong> using <strong>WordPress</strong> — the most flexible and budget-friendly platform available.</p>
-
-        <h3>Why You Need a Digital Product Website</h3>
-        <p>If you’re selling eBooks or online courses through marketplaces or DMs, you’re losing control over your brand and profits. With your <strong>own website</strong>, you can:</p>
-        <ul>
-            <li>Keep <strong>100% profit</strong> from your digital sales</li>
-            <li>Build a <strong>personal brand</strong> around your products</li>
-            <li>Offer <strong>instant downloads</strong> and collect customer emails</li>
-            <li>Automate payments via PayPal, Razorpay, or Stripe</li>
-            <li>Sell 24/7 without relying on third-party platforms</li>
-        </ul>
-        <p>That’s why thousands of <strong>creators in India</strong> are shifting to self-hosted <strong>WordPress digital product websites</strong>.</p>
-
-        <h3>What is a Digital Product Website?</h3>
-        <p>A <strong>digital product website</strong> is an online store designed to sell non-physical products like:</p>
-        <ul>
-            <li>eBooks</li>
-            <li>Online courses</li>
-            <li>Templates, PDFs, Notion docs, or digital planners</li>
-            <li>Video tutorials or mini workshops</li>
-        </ul>
-        <p>With <strong>WordPress</strong>, you can create a professional-looking digital product store on a small budget — ideal for beginners, creators, and small businesses.</p>
-
-        <h3>Our Affordable Website Design Service in India</h3>
-        <p>Looking for <strong>affordable digital product website design in India</strong>? You don’t need to spend ₹10,000+ on complex setups. For just <strong>₹2999</strong>, you get a complete WordPress website with:</p>
-        <ul>
-            <li>Modern, mobile-friendly design</li>
-            <li>Payment gateway integration (Razorpay/PayPal)</li>
-            <li>Product upload setup for eBooks & courses</li>
-            <li>1-year free hosting</li>
-            <li>1-year support</li>
-        </ul>
-        <p>Perfect for freelancers, content creators, and solopreneurs who want to start selling quickly without monthly fees.</p>
-
-        <h3>Digital Product Website Design for Creators</h3>
-        <p>Creators are the new entrepreneurs, and your website should reflect your creativity. Whether you sell Lightroom presets, Canva templates, eBooks, or online guides, your <strong>digital product website design for creators</strong> will be:</p>
-        <ul>
-            <li><strong>Clean & professional</strong> (builds trust)</li>
-            <li><strong>Fast-loading</strong> (better conversions)</li>
-            <li><strong>Easy to update</strong> (upload new products anytime)</li>
-            <li><strong>Optimized for mobile users</strong></li>
-        </ul>
-        <p>With WordPress, you get full ownership, no monthly subscription costs (unlike Shopify or Kajabi), and a brand hub where your audience can buy products, read blogs, and join your email list.</p>
-
-        <h3>eBook Selling Website Design with WordPress</h3>
-        <p>For authors and bloggers, a <strong>WordPress eBook selling website</strong> can help you earn passive income. A great <strong>eBook selling website design</strong> includes:</p>
-        <ul>
-            <li><strong>Beautiful landing page</strong> showcasing eBook covers and benefits</li>
-            <li><strong>One-click checkout</strong> with instant download links</li>
-            <li>Secure payment gateway integration (Razorpay/Stripe)</li>
-            <li>Testimonials and reviews section</li>
-            <li>SEO setup for book titles and keywords</li>
-        </ul>
-        <p>Sell eBooks directly to readers — no Amazon fees, no middlemen, and full control over pricing, design, and customer relationships.</p>
-
-        <h3>Online Course Selling Website Design</h3>
-        <p>For coaches and trainers, a <strong>professional course selling website</strong> reflects your expertise without the monthly charges of platforms like Teachable or Thinkific. A great <strong>online course selling website design</strong> includes:</p>
-        <ul>
-            <li>Clean homepage showcasing your courses</li>
-            <li>Video preview section for demos</li>
-            <li>Enrollment and payment integration</li>
-            <li>Course content protection (only for paid users)</li>
-            <li>Student testimonials and FAQ section</li>
-        </ul>
-        <p>Use free WordPress plugins like <strong>LearnPress</strong> or <strong>Tutor LMS</strong> to manage lessons, progress, and certificates easily. Your course website becomes your own online academy.</p>
-
-        <h3>Why Choose WordPress for Your Digital Product Website</h3>
-        <p>WordPress powers over 40% of websites globally, making it the ideal choice for your digital product business. Here’s why:</p>
-        <ul>
-            <li><strong>No monthly fees</strong> — just one-time setup</li>
-            <li><strong>Full control</strong> over design and branding</li>
-            <li><strong>Supports all product types</strong> — PDFs, eBooks, templates, videos</li>
-            <li><strong>Easy to update</strong> — no coding required</li>
-            <li><strong>SEO-friendly</strong> — helps you rank on Google faster</li>
-        </ul>
-        <p>WordPress offers the flexibility to scale your business at your own pace, whether you’re just starting or already have multiple products.</p>
-
-        <h3>What’s Included in Our ₹2999 Package</h3>
-        <p>With our <strong>affordable digital product website design service</strong>, you get:</p>
-        <ul>
-            <li>Modern WordPress design (ready-to-sell layout)</li>
-            <li>Product pages for eBooks, courses, and templates</li>
-            <li>Payment integration (Razorpay/PayPal)</li>
-            <li>Free hosting for 1 year</li>
-            <li>Free support for 1 year</li>
-            <li>Mobile-friendly + SEO setup</li>
-            <li><strong>Bonus:</strong> We’ll upload your first 3 products for free to help you launch faster.</li>
-        </ul>
-
-        <h3>How It Works</h3>
-        <p>Getting your digital product website is simple:</p>
-        <ol>
-            <li><strong>Contact Us on WhatsApp:</strong> Share your idea or product type (eBook, course, etc.)</li>
-            <li><strong>Choose Your Design Layout:</strong> Pick from 2–3 prebuilt WordPress templates</li>
-            <li><strong>Setup & Launch:</strong> Your site goes live in 48–72 hours!</li>
-        </ol>
-
-        <h3>Ready to Launch Your Digital Product Business?</h3>
-        <p>Building a <strong>digital product website</strong> is about creating your brand, business, and independence. Whether you’re a <strong>creator</strong>, <strong>coach</strong>, or <strong>author</strong>, our <strong>affordable digital product website design in India</strong> lets you sell eBooks, online courses, or templates easily with WordPress.</p>
-        <p><strong>Ready to launch your digital product business?</strong> <a href="https://wa.me/+918979401469" class="btn">WhatsApp Us Now</a></p>
+    <section class="hero section">
+        <h1>Launch Your Digital Product Empire</h1>
+        <p>Are you a creator, coach, or author ready to sell <strong>eBooks</strong>, <strong>online courses</strong>, or <strong>digital downloads</strong>? With <strong>affordable WordPress website design in India</strong> starting at just <strong>₹2999</strong>, Faisal Arif delivers professional, mobile-friendly websites tailored for creators. Get <strong>free hosting</strong>, <strong>1-year support</strong>, and a seamless setup to launch your <strong>digital product business</strong> in 48–72 hours.</p>
+        <a href="https://wa.me/+918979401469" class="btn">Start Now</a>
     </section>
 
-    <!-- Sticky WhatsApp Button -->
+    <section id="digital-product" class="section">
+        <div class="section-alt">
+            <h2>Why You Need a Digital Product Website</h2>
+            <p>Selling through marketplaces like Amazon or social media DMs limits your control and profits. A <strong>custom WordPress website</strong> empowers you to take charge of your digital business. Here’s why creators across India are choosing their own <strong>digital product websites</strong>:</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i>Keep <strong>100% profit</strong> without platform commissions</li>
+                <li><i class="fas fa-check-circle"></i>Build a <strong>personal brand</strong> to stand out</li>
+                <li><i class="fas fa-check-circle"></i>Offer <strong>instant downloads</strong> and collect customer emails</li>
+                <li><i class="fas fa-check-circle"></i>Automate payments with <strong>Razorpay</strong>, <strong>PayPal</strong>, or <strong>Stripe</strong></li>
+                <li><i class="fas fa-check-circle"></i>Sell <strong>24/7</strong> without third-party restrictions</li>
+            </ul>
+            <p>Join thousands of <strong>Indian creators</strong> building their <strong>digital product websites</strong> with WordPress, the platform powering over 40% of the internet.</p>
+        </div>
+
+        <h2>What is a Digital Product Website?</h2>
+        <img src="https://via.placeholder.com/800x300?text=Digital+Product+Website+Design" alt="WordPress Digital Product Website Design">
+        <p>A <strong>digital product website</strong> is an online store for non-physical products like:</p>
+        <ul>
+            <li><i class="fas fa-book"></i><strong>eBooks</strong>: Guides, novels, or niche resources</li>
+            <li><i class="fas fa-graduation-cap"></i><strong>Online Courses</strong>: Video lessons or certifications</li>
+            <li><i class="fas fa-file-alt"></i><strong>Digital Downloads</strong>: Templates, PDFs, or planners</li>
+            <li><i class="fas fa-video"></i><strong>Video Content</strong>: Tutorials or workshops</li>
+        </ul>
+        <p>With <strong>WordPress</strong>, you can create a professional store on a budget, perfect for beginners and small businesses in India looking to sell globally.</p>
+
+        <div class="section-alt">
+            <h2>Our Affordable Website Design Service in India</h2>
+            <p>No need to spend ₹10,000+ on complex setups. For just <strong>₹2999</strong>, get a complete WordPress website with:</p>
+            <ul>
+                <li><i class="fas fa-desktop"></i><strong>Modern, mobile-friendly design</strong></li>
+                <li><i class="fas fa-credit-card"></i><strong>Payment gateway integration</strong> (Razorpay/PayPal)</li>
+                <li><i class="fas fa-upload"></i><strong>Product upload setup</strong> for eBooks & courses</li>
+                <li><i class="fas fa-server"></i><strong>1-year free hosting</strong></li>
+                <li><i class="fas fa-headset"></i><strong>1-year support</strong></li>
+                <li><i class="fas fa-gift"></i><strong>Bonus</strong>: Free upload of your first 3 products</li>
+            </ul>
+            <p>Ideal for freelancers, content creators, and solopreneurs looking to sell without monthly fees.</p>
+        </div>
+
+        <h2>Digital Product Website Design for Creators</h2>
+        <p>Your website should reflect your creativity. Whether you sell Lightroom presets, Canva templates, or guides, your <strong>digital product website</strong> will be:</p>
+        <ul>
+            <li><i class="fas fa-star"></i><strong>Clean & professional</strong> to build trust</li>
+            <li><i class="fas fa-bolt"></i><strong>Fast-loading</strong> for better conversions</li>
+            <li><i class="fas fa-edit"></i><strong>Easy to update</strong> — add products anytime</li>
+            <li><i class="fas fa-mobile-alt"></i><strong>Optimized for mobile</strong> users</li>
+        </ul>
+        <p>WordPress offers full ownership, no subscription costs, and a hub for products, blogs, and email lists.</p>
+
+        <div class="section-alt">
+            <h2>eBook Selling Website Design with WordPress</h2>
+            <p>Earn passive income with a <strong>WordPress eBook website</strong>. Your <strong>eBook selling website design</strong> includes:</p>
+            <ul>
+                <li><i class="fas fa-book-open"></i><strong>Beautiful landing page</strong> for eBook covers</li>
+                <li><i class="fas fa-cart-arrow-down"></i><strong>One-click checkout</strong> with instant downloads</li>
+                <li><i class="fas fa-lock"></i><strong>Secure payment gateways</strong> (Razorpay/Stripe)</li>
+                <li><i class="fas fa-quote-left"></i><strong>Testimonials section</strong> for credibility</li>
+                <li><i class="fas fa-search"></i><strong>SEO setup</strong> for book titles</li>
+            </ul>
+            <p>Sell directly to readers—no Amazon fees, full control over pricing and design.</p>
+        </div>
+
+        <h2>Online Course Selling Website Design</h2>
+        <p>Showcase your expertise with a <strong>professional course website</strong>. Your <strong>course website design</strong> includes:</p>
+        <ul>
+            <li><i class="fas fa-home"></i><strong>Clean homepage</strong> for courses</li>
+            <li><i class="fas fa-video"></i><strong>Video preview section</strong> for demos</li>
+            <li><i class="fas fa-user-plus"></i><strong>Enrollment and payment integration</strong></li>
+            <li><i class="fas fa-shield-alt"></i><strong>Course content protection</strong></li>
+            <li><i class="fas fa-comments"></i><strong>Student testimonials and FAQs</strong></li>
+        </ul>
+        <p>Use free plugins like <strong>LearnPress</strong> or <strong>Tutor LMS</strong> to manage lessons and certificates.</p>
+
+        <div class="section-alt">
+            <h2>Why Choose WordPress?</h2>
+            <p>WordPress powers over 40% of websites globally, making it perfect for your digital product business:</p>
+            <ul>
+                <li><i class="fas fa-money-bill"></i><strong>No monthly fees</strong> — one-time setup</li>
+                <li><i class="fas fa-paint-brush"></i><strong>Full control</strong> over design</li>
+                <li><i class="fas fa-file-alt"></i><strong>Supports all product types</strong> — PDFs, videos</li>
+                <li><i class="fas fa-cogs"></i><strong>Easy to update</strong> — no coding needed</li>
+                <li><i class="fas fa-search"></i><strong>SEO-friendly</strong> — rank faster on Google</li>
+            </ul>
+        </div>
+
+        <h2>What’s Included in Our ₹2999 Package</h2>
+        <p>With our <strong>affordable digital product website design</strong>, you get:</p>
+        <ul>
+            <li><i class="fas fa-desktop"></i><strong>Modern WordPress design</strong></li>
+            <li><i class="fas fa-file-upload"></i><strong>Product pages</strong> for eBooks, courses, templates</li>
+            <li><i class="fas fa-credit-card"></i><strong>Payment integration</strong> (Razorpay/PayPal)</li>
+            <li><i class="fas fa-server"></i><strong>Free hosting</strong> for 1 year</li>
+            <li><i class="fas fa-headset"></i><strong>Free support</strong> for 1 year</li>
+            <li><i class="fas fa-mobile-alt"></i><strong>Mobile-friendly + SEO setup</strong></li>
+            <li><i class="fas fa-gift"></i><strong>Bonus</strong>: Free upload of your first 3 products</li>
+        </ul>
+
+        <div class="section-alt">
+            <h2>How It Works</h2>
+            <p>Getting your digital product website is simple:</p>
+            <ol>
+                <li><strong>Contact Us on WhatsApp</strong>: Share your idea (eBook, course, etc.)</li>
+                <li><strong>Choose Your Design</strong>: Pick from 2–3 WordPress templates</li>
+                <li><strong>Launch</strong>: Your site goes live in 48–72 hours!</li>
+            </ol>
+        </div>
+
+        <div class="testimonial">
+            <p>"Faisal built my eBook website in just 3 days! It’s professional, fast, and I’m already making sales without any platform fees!"</p>
+            <span>— Priya Sharma, Author</span>
+        </div>
+        <div class="testimonial">
+            <p>"The course website Faisal designed is amazing. It’s easy to manage, and my students love the seamless experience!"</p>
+            <span>— Rohan Mehta, Online Educator</span>
+        </div>
+
+        <h2>Why India is the Perfect Market for Digital Products</h2>
+        <p>India’s digital economy is booming, with millions seeking eBooks, courses, and templates online. A <strong>digital product website</strong> lets you tap into this market while serving global customers. With our <strong>affordable website design in India</strong>, you can compete without a big budget.</p>
+
+        <h2>Tips for Success with Your Digital Product Website</h2>
+        <p>Maximize your website’s potential with these tips:</p>
+        <ul>
+            <li><i class="fas fa-search"></i><strong>Optimize for SEO</strong>: Use keywords like your product titles to rank higher</li>
+            <li><i class="fas fa-users"></i><strong>Engage Your Audience</strong>: Add a blog or email signup</li>
+            <li><i class="fas fa-share-alt"></i><strong>Promote on Social Media</strong>: Share on X, Instagram, or LinkedIn</li>
+            <li><i class="fas fa-sync"></i><strong>Update Regularly</strong>: Add new products to keep visitors returning</li>
+            <li><i class="fas fa-chart-line"></i><strong>Analyze Performance</strong>: Use Google Analytics to track sales</li>
+        </ul>
+
+        <h2>Ready to Launch Your Digital Product Business?</h2>
+        <p>Build your <strong>brand</strong> and <strong>independence</strong> with a <strong>digital product website</strong>. Whether you’re a <strong>creator</strong>, <strong>coach</strong>, or <strong>author</strong>, our <strong>affordable website design in India</strong> helps you sell eBooks, courses, or templates with WordPress.</p>
+        <p><strong>Ready to start?</strong> <a href="https://wa.me/+918979401469" class="btn">WhatsApp Us Now</a></p>
+    </section>
+
     <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
 
     <script>
@@ -404,7 +550,6 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // Hamburger Menu Toggle
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
 
