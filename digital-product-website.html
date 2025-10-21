@@ -1,1 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Product Website Service | Faisal Arif</title>
+    <meta name="description" content="Faisal Arif's Digital Product Website Service creates high-converting websites for courses, e-books, and software to drive sales and engagement.">
+    <meta name="keywords" content="digital product website, high-converting websites, online courses, e-books, software website, freelance web designer">
+    <meta name="author" content="Faisal Arif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
 
+        body {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        /* Sticky Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 20px;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        /* Digital Product Section */
+        #digital-product {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #digital-product h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #digital-product h3 {
+            font-size: 1.4rem;
+            margin: 20px 0 10px;
+            color: #007bff;
+        }
+
+        #digital-product p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #digital-product ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #digital-product ul li {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        #digital-product img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 20px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sticky WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Smooth Scroll Animation */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            #digital-product h2 {
+                font-size: 1.8rem;
+            }
+
+            #digital-product h3 {
+                font-size: 1.2rem;
+            }
+
+            #digital-product p {
+                font-size: 0.9rem;
+            }
+
+            #digital-product ul li {
+                font-size: 0.8rem;
+            }
+
+            #digital-product img {
+                max-height: 200px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #digital-product h2 {
+                font-size: 1.5rem;
+            }
+
+            #digital-product h3 {
+                font-size: 1.1rem;
+            }
+
+            #digital-product p {
+                font-size: 0.8rem;
+            }
+
+            #digital-product img {
+                max-height: 150px;
+            }
+
+            .whatsapp-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Faisal Arif</div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Digital Product Website Service Section -->
+    <section id="digital-product" class="section">
+        <h2>Digital Product Website Service</h2>
+        <img src="https://via.placeholder.com/800x300?text=Digital+Product+Website" alt="Digital Product Website">
+        <p>Launch your digital products with a <strong>high-converting website</strong> designed to drive sales and engagement. Whether you're selling online courses, e-books, software, or digital downloads, I create tailored websites that showcase your products and convert visitors into customers.</p>
+        <h3>Why Choose My Digital Product Website Service?</h3>
+        <p>My service is designed to help <strong>coaches, consultants, and creators</strong> succeed online. With a focus on user experience, SEO optimization, and conversion-driven design, your website will stand out in the competitive digital marketplace.</p>
+        <ul>
+            <li><strong>Custom Design:</strong> Unique, brand-aligned designs that reflect your vision.</li>
+            <li><strong>Conversion Optimization:</strong> Strategically designed layouts to maximize sales and sign-ups.</li>
+            <li><strong>Mobile Responsiveness:</strong> Websites that look stunning on all devices, from desktops to smartphones.</li>
+            <li><strong>SEO Optimization:</strong> Built-in SEO best practices to rank higher on search engines.</li>
+            <li><strong>Fast Loading Times:</strong> Optimized performance to keep visitors engaged.</li>
+            <li><strong>Integration Support:</strong> Seamless integration with payment gateways, email marketing tools, and more.</li>
+        </ul>
+        <h3>What I Can Build for You</h3>
+        <p>From landing pages for e-books to full-fledged platforms for online courses, I specialize in creating <strong>digital product websites</strong> that deliver results. My process includes consultation, design, development, and ongoing support to ensure your website meets your business goals.</p>
+        <p>Ready to launch your digital product? <a href="contact.html" class="btn">Get in Touch</a></p>
+    </section>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/+918979401469" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => observer.observe(section));
+
+            // Hamburger Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
